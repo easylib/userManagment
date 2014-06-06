@@ -1,0 +1,19 @@
+{
+    "name": "easylib/usermanagment",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Kruemel",
+            "email": "kruemel@schredder.pw"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "easylib/pdow":"*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Easy\\userManagment\\": ""
+        }
+    }
+}
