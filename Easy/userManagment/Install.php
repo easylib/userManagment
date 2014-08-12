@@ -8,8 +8,8 @@ class Install
 		$this->querys = array();
 		//Querys Version 1
 		$this->querys[1][] = 'CREATE TABLE IF NOT EXISTS `user` (`id` int(255) NOT NULL, `username` varchar(255) NOT NULL, `pw` varchar(255) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;';
-		$this->querys[1][] = 'ALTER TABLE `installQuery` ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);';
-		$this->querys[1][] = 'ALTER TABLE `installQuery` MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;';
+		$this->querys[1][] = 'ALTER TABLE `user` ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);';
+		$this->querys[1][] = 'ALTER TABLE `user` MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;';
 
 	}
 	public function installQuery()
@@ -27,7 +27,7 @@ class Install
 	public function updateQuery($version = 0)
 	{
 		$q = array();
-		for($i=$version+1;$i<$this->version+1;$i++;)
+		for($i=$version+1;$i<$this->version+1;$i++)
 		{
 			if(isset($this->querys[$i]))
 			{
