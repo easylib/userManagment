@@ -40,13 +40,6 @@ class userManagment
 		}
 		return false;
 	}
-	public function installQuery()
-	{
-		$querys = array();
-		$querys[] = 'CREATE TABLE IF NOT EXISTS `user` (`id` int(255) NOT NULL, `username` varchar(255) NOT NULL, `pw` varchar(255) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;';
-		$querys[] = 'ALTER TABLE `installQuery` ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);';
-		$querys[] = 'ALTER TABLE `installQuery` MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;';
-		return array(1, $querys);
-	}
+
 }
 ?>
