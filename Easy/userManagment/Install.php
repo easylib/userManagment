@@ -36,6 +36,7 @@ class Install
 				{
 					$q[] = $query;
 				}
+			}
 		}
 		return array($this->version, $q);
 	}
